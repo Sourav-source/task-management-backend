@@ -18,7 +18,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://localhost:5173',
-    'https://your-frontend-name.vercel.app' // Update this after frontend deployment
+    'https://task-management-frontend-eight-wheat.vercel.app'
   ],
   credentials: true
 }));
