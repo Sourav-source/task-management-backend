@@ -13,7 +13,14 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors()); // Enable CORS for frontend communication
+// app.use(cors()); // Enable CORS for frontend communication  
+app.use(cors({
+  origin: "https://task-management-backend-cejtezy8i-souravs-projects-f1a8c21e.vercel.app",
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true  // if you need cookies / auth headers
+}));
+
 app.use(express.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
